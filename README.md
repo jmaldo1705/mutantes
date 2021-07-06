@@ -44,6 +44,12 @@ _Las pruebas se realizaron con Junit 5 y Mockito, el coverage se puede validar e
 ## Despliegue 📦
 
 _Para este caso se genera un jar, para pruebas locales se puede ejecutar la clase Main EncuestaApplication_
+_Las pruebas de los servicios se pueden realizar directamente en postman, las url para consumir los servicios son las siguientes:_
+POST
+localhost:8080/prueba/mutant
+
+GET
+localhost:8080/prueba/stats
 
 ## Construido con 🛠️
 
