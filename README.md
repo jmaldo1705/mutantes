@@ -11,12 +11,11 @@ Mira **Despliegue** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Para una ejecución en a,biente local se requiere mínimo Java 8 y como IDE Intellij, relaciono versión en la que se desarrolló_
+_Para una ejecución en ambiente local se requiere mínimo Java 8, relaciono versión en la que se encuentra desplegado_
 
 ```
-java version "1.8.0_291"
-Java(TM) SE Runtime Environment (build 1.8.0_291-b10)
-Java HotSpot(TM) Client VM (build 25.291-b10, mixed mode)
+Corretto 11 running on 64bit
+Amazon Linux 2/3.2.1
 ```
 
 ### Instalación 🔧
@@ -32,6 +31,9 @@ spring.datasource.password=pass
 _La URL para acceder a la base de datos en memoria es la siguiente:_
 
 ```
+Amazon:
+http://mutantes-env-1.eba-smtzb2ya.us-east-2.elasticbeanstalk.com/h2-console
+Local:
 http://localhost:8080/h2-console
 ```
 
@@ -47,7 +49,23 @@ _Para este caso se genera un jar, para pruebas locales se puede ejecutar la clas
 _Las pruebas de los servicios se pueden realizar directamente en postman, las url para consumir los servicios son las siguientes:_
 ```
 POST
-localhost:8080/prueba/mutant
+http://mutantes-env-1.eba-smtzb2ya.us-east-2.elasticbeanstalk.com/prueba/mutant
+Body:
+{
+"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+}
+
+GET
+http://mutantes-env-1.eba-smtzb2ya.us-east-2.elasticbeanstalk.com/prueba/stats
+```
+_Para ambiente local serían los siguientes datos:_
+```
+POST
+http://localhost:8080/prueba/mutant
+Body:
+{
+"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+}
 
 GET
 localhost:8080/prueba/stats
