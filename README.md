@@ -32,7 +32,7 @@ _La URL para acceder a la base de datos en memoria es la siguiente:_
 
 ```
 Amazon:
-http://mutantes-env-1.eba-smtzb2ya.us-east-2.elasticbeanstalk.com/h2-console
+http://ec2-18-223-171-159.us-east-2.compute.amazonaws.com:8080/h2-console/
 Local:
 http://localhost:8080/h2-console
 ```
@@ -49,14 +49,14 @@ _Para este caso se genera un jar, para pruebas locales se puede ejecutar la clas
 _Las pruebas de los servicios se pueden realizar directamente en postman, las url para consumir los servicios son las siguientes:_
 ```
 POST
-http://mutantes-env-1.eba-smtzb2ya.us-east-2.elasticbeanstalk.com/prueba/mutant
+http://ec2-18-223-171-159.us-east-2.compute.amazonaws.com:8080/prueba/mutant
 Body:
 {
 "dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
 }
 
 GET
-http://mutantes-env-1.eba-smtzb2ya.us-east-2.elasticbeanstalk.com/prueba/stats
+http://ec2-18-223-171-159.us-east-2.compute.amazonaws.com:8080/prueba/stats
 ```
 _Para ambiente local serían los siguientes datos:_
 ```
