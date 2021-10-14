@@ -9,5 +9,4 @@ public class MensajeDTO {
     public MensajeDTO(String mensaje) {
         this.mensaje = mensaje;
     }
-
 }
